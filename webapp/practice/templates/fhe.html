@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FHE Friend</title>
+  </head>
+  <body>
+    <h1>FHE Friend</h1>
+    <h3>Your Tool for Planning Family Home Evening Activities</h3>
+
+    Please sign in / sign up for FHE below.
+
+    <br /><br />
+
+    <input type="button" value="Prev" />
+    <input type="button" value="Next" />
+
+    <form action="{% url 'fhe' %}" method="post">
+      {% csrf_token %}
+      <label>Name: </label>
+      <input type="text" name="name" id="name" />
+      <br />
+      <br />
+      <label>Apartment #: </label>
+      <input type="number" name="apt" id="apt" />
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <br />
+
+    {{message}}
+
+    <br />
+
+    <!-- Separate this to a new page -->
+
+    <p>Suggest new ideas down here!</p>
+
+    <br />
+
+    <form action="{% url 'fhe/ideas' %}" method="post">
+      {% csrf_token %}
+      <label>Suggest new ideas here!</label>
+      <input type="text" name="idea" id="idea" />
+      <br />
+      <input type="submit" value="Full Send" />
+    </form>
+
+    <br />
+
+    <p>Vote on ideas down here!</p>
+
+    <br />
+
+    We currently have {{count}} members signed up for FHE.
+  </body>
+</html>
