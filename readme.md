@@ -19,19 +19,18 @@ To recreate the development environment, you need the following software and/or 
 
 - VSCode
 - Live Server extension
-- SQLite3
+- Django
 - HTML, CSS
 
 ## Useful Websites to Learn More
 
 I found these websites useful in developing this software:
 
--
--
--
+- [URL Mapping](https://www.tutorialspoint.com/django/django_url_mapping.htm)
+- [Django in Python](https://realpython.com/get-started-with-django-1/#add-the-pages-app)
 
 ## Future Work
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-- [ ] The whole thing
+- [ ] Get it working
